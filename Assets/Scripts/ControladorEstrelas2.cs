@@ -1,0 +1,15 @@
+using UnityEngine;
+using UnityEngine.UI;
+using System.Collections.Generic;
+public class ControladorEstrelas2 : MonoBehaviour
+{
+   public List<Image> imagens = new List<Image>();
+    public List<Sprite> stars = new List<Sprite>();
+
+    void Start()
+    {
+        if (PlayerPrefs.GetInt("MoedasFase2") >= 3) imagens[0].sprite = stars[0];
+        if (PlayerPrefs.GetInt("MoedasFase2") >= 6) imagens[1].sprite = stars[1];
+        if (PlayerPrefs.GetInt("MoedasFase2") >= 10) imagens[2].sprite = stars[2];
+    }
+}
